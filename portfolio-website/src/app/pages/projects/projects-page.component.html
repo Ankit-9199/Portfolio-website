@@ -1,0 +1,33 @@
+<section class="projects-page">
+
+  <div class="projects-header">
+    <span class="projects-eyebrow">Portfolio</span>
+    <h1 class="projects-title">My Projects</h1>
+    <p class="projects-subtitle">A selection of things I've built across frontend, backend, and full-stack.</p>
+  </div>
+
+  @if (featuredProject) {
+    <div class="featured-section">
+      <p class="section-label">
+        <span class="featured-badge">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          Featured
+        </span>
+        Highlighted Work
+      </p>
+      <app-project-card [project]="featuredProject" />
+    </div>
+  }
+
+  @if (otherProjects.length > 0) {
+    <div class="other-section">
+      <p class="section-label">All Projects</p>
+      <div class="projects-grid">
+        @for (project of otherProjects; track project.id) {
+          <app-project-card [project]="project" />
+        }
+      </div>
+    </div>
+  }
+
+</section>

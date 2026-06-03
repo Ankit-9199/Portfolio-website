@@ -1,0 +1,86 @@
+<div class="about-page">
+
+  <!-- Hero banner -->
+  <div class="about-hero">
+    <div class="about-hero__orb about-hero__orb--1"></div>
+    <div class="about-hero__orb about-hero__orb--2"></div>
+    <div class="about-hero__content">
+      <span class="about-hero__eyebrow">About Me</span>
+      <h1 class="about-hero__title">
+        Passionate about <span class="gradient-text">building things</span> that matter
+      </h1>
+    </div>
+  </div>
+
+  <div class="about-body">
+
+    <!-- Bio card -->
+    <div class="card bio-card">
+      <div class="card__icon-wrap">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </div>
+      <h2>Who I Am</h2>
+      <p>
+        Full-stack developer with <strong>4.8 years of experience</strong> designing, developing,
+        and deploying scalable web applications. Strong expertise in Angular, Python (Flask), and
+        modern JavaScript frameworks, with hands-on experience building RESTful APIs, optimizing
+        UI performance, and managing end-to-end deployments using Docker.
+      </p>
+      <p>
+        Currently working as a <strong>Software Developer at Aloha Technology Pvt Ltd</strong>
+        (Sept 2021 – Present), Pune — developing scalable web apps, designing REST APIs,
+        leading UI development, deploying with Docker, and collaborating directly with clients
+        to deliver on requirements and timelines.
+      </p>
+
+      <div class="bio-card__highlights">
+        <div class="highlight">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          Full-Stack Development
+        </div>
+        <div class="highlight">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          UI/UX Implementation
+        </div>
+        <div class="highlight">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          API Integration & Auth
+        </div>
+        <div class="highlight">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          Docker & Deployment
+        </div>
+      </div>
+    </div>
+
+    <!-- Skills card -->
+    <div class="card skills-card">
+      <div class="card__icon-wrap">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+      </div>
+      <h2>Skills &amp; Technologies</h2>
+      <app-skills [groups]="skillGroups" />
+    </div>
+
+    <!-- Resume card -->
+    <div class="card resume-card">
+      <div class="card__icon-wrap">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+      </div>
+      <h2>Resume</h2>
+      <p>Get a full overview of my experience, education, and qualifications.</p>
+      <a
+        href="/Ankit_Mistry_Resume.pdf"
+        download="Ankit_Mistry_Resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="resume-btn"
+        aria-label="Download Ankit Mistry's resume PDF"
+      >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download Resume (PDF)
+      </a>
+    </div>
+
+  </div>
+</div>

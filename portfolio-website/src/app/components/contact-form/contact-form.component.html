@@ -1,0 +1,60 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+
+  <div class="form-field">
+    <label for="name">Name</label>
+    <input
+      id="name"
+      type="text"
+      formControlName="name"
+      [class.invalid]="isFieldInvalid('name')"
+      autocomplete="name"
+    />
+    @if (isFieldInvalid('name')) {
+      <span class="error" role="alert">Name is required.</span>
+    }
+  </div>
+
+  <div class="form-field">
+    <label for="email">Email</label>
+    <input
+      id="email"
+      type="email"
+      formControlName="email"
+      [class.invalid]="isFieldInvalid('email')"
+      autocomplete="email"
+    />
+    @if (isFieldInvalid('email')) {
+      @if (form.get('email')?.errors?.['required']) {
+        <span class="error" role="alert">Email is required.</span>
+      } @else {
+        <span class="error" role="alert">Please enter a valid email address.</span>
+      }
+    }
+  </div>
+
+  <div class="form-field">
+    <label for="message">Message</label>
+    <textarea
+      id="message"
+      formControlName="message"
+      [class.invalid]="isFieldInvalid('message')"
+      rows="5"
+    ></textarea>
+    @if (isFieldInvalid('message')) {
+      <span class="error" role="alert">Message is required.</span>
+    }
+  </div>
+
+  @if (successMessage) {
+    <p class="success-message" role="status">{{ successMessage }}</p>
+  }
+
+  @if (errorMessage) {
+    <p class="error-message" role="alert">{{ errorMessage }}</p>
+  }
+
+  <button type="submit" [disabled]="submitting">
+    {{ submitting ? 'Sending…' : 'Send Message' }}
+  </button>
+
+</form>

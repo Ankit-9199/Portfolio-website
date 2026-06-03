@@ -1,0 +1,28 @@
+<nav class="navbar">
+  <a class="brand" routerLink="/">Portfolio</a>
+
+  <button
+    class="hamburger"
+    (click)="toggleMenu()"
+    aria-label="Toggle navigation"
+    [attr.aria-expanded]="menuOpen()"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <ul class="nav-links" [class.open]="menuOpen()">
+    <li>
+      <a
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >Home</a>
+    </li>
+    <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+    <li><a routerLink="/projects" routerLinkActive="active">Projects</a></li>
+    <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+    <li><app-theme-toggle /></li>
+  </ul>
+</nav>

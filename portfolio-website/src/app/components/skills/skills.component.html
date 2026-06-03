@@ -1,0 +1,12 @@
+<div class="skills-grid">
+  @for (group of groups; track group.category) {
+    <div class="skill-group">
+      <h3 class="skill-group__title">{{ group.category }}</h3>
+      <ul class="skill-group__list">
+        @for (skill of group.skills; track skill.name) {
+          <li class="skill-chip">{{ skill.name }}</li>
+        }
+      </ul>
+    </div>
+  }
+</div>
